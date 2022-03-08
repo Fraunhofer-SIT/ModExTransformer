@@ -1,6 +1,6 @@
 # ModExTransformer
 # Transformer-based Extraction of Deep Image Models
-This is the official repository to the paper **Transformer-based Extraction of Deep Image Models** presented on the EuroS&P 2022.
+This is the official repository to the paper **Transformer-based Extraction of Deep Image Models** presented on the IEEE 7th European Symposium on Security and Privacy (EuroS&P'22).
 
 This repository is largely based on [deit](https://github.com/facebookresearch/deit).
 
