@@ -1,3 +1,7 @@
+""" Taken and modifided from: 
+    Tribhuvanesh Orekondy, https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/blackbox.py """"
+
+
 #!/usr/bin/python
 """Code to simulate a black-box model
 """
