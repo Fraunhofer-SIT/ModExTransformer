@@ -1,7 +1,14 @@
 
 """ Copied and modified from https://github.com/facebookresearch/deit/blob/main/main.py
 
- Modified passages are preceded and followed by #######################   """
+ Modified passages are marked with 
+ 
+ #### Begin modifications 
+ 
+ Code added or modified
+ 
+ #### End modifications  """
+
 
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
