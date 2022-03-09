@@ -1,7 +1,13 @@
-# Copied and modified from https://github.com/facebookresearch/deit/blob/main/main.py
+
+""" Copied and modified from https://github.com/facebookresearch/deit/blob/main/main.py
+
+ Modified passages are preceded and followed by #######################   """
 
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
+
+
+
 import argparse
 import datetime
 import numpy as np
@@ -27,6 +33,9 @@ import utils
 from defenses.victim import MAD, ReverseSigmoid, RandomNoise
 from datasets import get_dataset, ThiefDataset
 
+"""
+def get_args_parser() relocated to file 'basic_config.ini'
+"""
 
 def main(args):
     utils.init_distributed_mode(args)
@@ -51,10 +60,12 @@ def main(args):
     dataset_train = get_dataset(args.dataset, train=True, data_path=args.data_path, transform=build_transform(args.augmentation, **vars(args)))
     dataset_val = get_dataset(args.dataset, train=False, data_path=args.data_path, transform=build_transform(False, **vars(args)))
 
+#### Begin modifications
+   
     if not args.num_samples:
         args.num_samples = len(dataset_train)
-
-###################################################
+       
+#### End modifications
 
     if args.mixup > 0.:
         # smoothing is handled with mixup label transform
@@ -70,7 +81,7 @@ def main(args):
         assert args.target_path, 'need to specify target-path when using distillation'
         print(f"Creating target model: {args.target_model}")
 
-###############################################
+#### Begin modifications
 
         # Load full torch model
         if args.target_model == 'full':
@@ -99,12 +110,10 @@ def main(args):
             )
             target_model.load_state_dict(checkpoint['model'])
 
-###############################################
 
         target_model.to(device)
         target_model.eval()
 
-###################################################
 
         if args.defense != 'none':
             args.softmax_target = True
@@ -132,6 +141,7 @@ def main(args):
             else:
                 raise NotImplementedError
 
+             
         if not args.augmentation:
             print('Train without augmentation')
             label_only = args.distillation_type == 'hard'
@@ -145,7 +155,7 @@ def main(args):
         if not args.num_classes:
             args.num_classes = utils.infer_num_classes_from_dataset(dataset_train)
 
-###################################################
+   #### End modifications
 
     if args.distributed:
         num_tasks = utils.get_world_size()
@@ -169,6 +179,8 @@ def main(args):
             sampler_val = torch.utils.data.SequentialSampler(dataset_val)
     else:
 
+#### Begin modifications
+
         if args.weights_path:
             print(f'Loading weights from {args.weights_path}')
             weights = torch.load(args.weights_path)
@@ -183,7 +195,7 @@ def main(args):
 
         sampler_val = torch.utils.data.SequentialSampler(dataset_val)
 
-###################################################
+#### End modifications
 
     data_loader_train = torch.utils.data.DataLoader(
         dataset_train, sampler=sampler_train,
@@ -279,6 +291,7 @@ def main(args):
     loss_scaler = NativeScaler()
 
     lr_scheduler, _ = create_scheduler(args, optimizer)
+    
 
     output_dir = Path(args.output_dir)
     
@@ -325,13 +338,13 @@ def main(args):
 
         lr_scheduler.step(epoch)
 
-###################################################
+#### Begin modifications
 
         checkpoint_paths = [output_dir / f'checkpoint.pth']
         if args.output_dir and (epoch+1) % args.checkpoint_frequency == 0:
             checkpoint_paths.append(output_dir / f'checkpoint_epoch_{epoch+1}.pth')
 
-###################################################
+#### End modifications
 
         for checkpoint_path in checkpoint_paths:
             utils.save_on_master({
@@ -344,7 +357,7 @@ def main(args):
                 'args': args,
             }, checkpoint_path)
 
-###################################################
+#### Begin modifications
 
         if args.with_eval:
             test_stats = evaluate(data_loader_val, model, device)
@@ -354,7 +367,7 @@ def main(args):
         else:
             test_stats = {'acc1': '-'}
 
-###################################################
+#### End modifications
 
         log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
                      **{f'test_{k}': v for k, v in test_stats.items()},
