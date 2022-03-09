@@ -1,3 +1,7 @@
+""" Source: Tribhuvanesh Orekondy
+    URL: https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/utils/projection.py """"
+
+
 """ Module to compute projections on the positive simplex or the L1-ball
 
 A positive simplex is a set X = { \mathbf{x} | \sum_i x_i = s, x_i \geq 0 }
