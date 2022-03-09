@@ -1,4 +1,5 @@
-""" Source: Tribhuvanesh Orekondy
+""" MIT License
+    Copyright (c) 2020 Tribhuvanesh Orekondy
     URL: https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/utils/projection.py """"
 
 
