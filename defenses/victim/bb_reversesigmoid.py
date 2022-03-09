@@ -1,3 +1,6 @@
+""" Taken and modifided from: 
+    Tribhuvanesh Orekondy, https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/bb_reversesigmoid.py """"
+
 import os
 import os.path as osp
 import pickle
