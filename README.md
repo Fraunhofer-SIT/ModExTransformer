@@ -2,7 +2,7 @@
 This is the official repository for the paper **Transformer-based Extraction of Deep Image Models** presented at the IEEE 7th European Symposium on Security and Privacy (EuroS&P'22).
 
 In our Paper, we propose to use a transformer model, namely Facebook's DeiT, to copy deep image models. Hence, this repository is largely based on Facebook Research's [deit](https://github.com/facebookresearch/deit)-repository.
-The defense mechanisms described in Section 6 of the Paper were taken from Tribhuvanesh Orekondy's [prediction-poisoning](https://github.com/tribhuvanesh/prediction-poisoning)-repository.
+In addition, the defense mechanisms described in Section 6 of the Paper were taken from Tribhuvanesh Orekondy's [prediction-poisoning](https://github.com/tribhuvanesh/prediction-poisoning)-repo.
 
 
 ## Dependencies
