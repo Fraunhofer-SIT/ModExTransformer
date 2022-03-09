@@ -1,4 +1,7 @@
-""" Copied and modified from https://github.com/facebookresearch/deit/blob/main/models.py
+""" Apache 2.0 License
+    Copyright (c) 2020-present, Facebook, Inc.
+    Taken and modified from: https://github.com/facebookresearch/deit/blob/main/models.py
+    
  Modified passages are marked with 
  
  #### Begin modifications 
