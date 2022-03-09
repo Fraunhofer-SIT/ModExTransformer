@@ -1,3 +1,13 @@
+""" Copied and modified from https://github.com/facebookresearch/deit/blob/main/models.py
+ Modified passages are marked with 
+ 
+ #### Begin modifications 
+ 
+ Code added or modified
+ 
+ #### End modifications  """
+
+
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
 import torch
@@ -210,6 +220,7 @@ def deit_base_distilled_patch16_384(pretrained=False, **kwargs):
         model.load_state_dict(checkpoint["model"], strict=False)
     return model
 
+#### Begin modifications
 
 @register_model
 def googlenet(pretrained=True, num_classes=1000, **kwargs):
@@ -218,3 +229,5 @@ def googlenet(pretrained=True, num_classes=1000, **kwargs):
     if num_classes != 1000:
         model.fc = nn.Linear(in_features=1024, out_features=num_classes, bias=True)
     return model
+
+#### End modifications
