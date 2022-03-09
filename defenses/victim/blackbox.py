@@ -1,5 +1,6 @@
-""" Taken and modifided from: 
-    Tribhuvanesh Orekondy, https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/blackbox.py """"
+""" MIT License
+    Copyright (c) 2020 Tribhuvanesh Orekondy
+    Taken and modified from: https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/blackbox.py """"
 
 
 #!/usr/bin/python
