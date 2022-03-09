@@ -1,3 +1,12 @@
+""" Copied and modified from https://github.com/facebookresearch/deit/blob/main/utils.py
+ Modified passages are marked with 
+ 
+ #### Begin modifications 
+ 
+ Code added or modified
+ 
+ #### End modifications  """
+
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
 """
@@ -239,6 +248,7 @@ def init_distributed_mode(args):
     torch.distributed.barrier()
     setup_for_distributed(args.rank == 0)
 
+ #### Begin modifications     
 
 def get_free_gpu(num_gpus=1, free_portion=0.99):
     res = os.popen('nvidia-smi -q -d Memory |grep -A4 GPU|grep -e Total -e Free').readlines()
@@ -264,3 +274,6 @@ def infer_num_classes_from_model_checkpoint(checkpoint):
     for key in ['head.bias', 'fc.bias', 'head.fc.bias']:
         if key in checkpoint:
             return len(checkpoint[key])
+        
+        
+ #### End modifications 
