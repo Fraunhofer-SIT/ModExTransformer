@@ -1,3 +1,6 @@
+""" Taken and modifided from: 
+    Tribhuvanesh Orekondy, https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/__init__.py """"
+
 from .blackbox import Blackbox
 
 #### Cleaned up models
