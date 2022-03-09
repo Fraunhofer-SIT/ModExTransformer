@@ -1,3 +1,6 @@
+
+"""   Package taken and modified from https://github.com/mseitzer/pytorch-fid  """
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
