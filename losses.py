@@ -1,5 +1,29 @@
+
+# Apache 2.0 License
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
+
+
+""" This file was copied from: https://github.com/facebookresearch/deit/blob/main/losses.py
+    
+    and modified by Fraunhofer SIT in order to use the DeiT as attack model in a model extraction attack.
+
+    Modified passages are marked as follows: 
+
+    #### Begin modifications 
+
+    Code added or modified
+
+    #### End modifications  
+    
+    
+    Apache 2.0 License
+    Copyright (c) 2022, Fraunhofer e.V.
+    All rights reserved.
+    
+"""
+
+
 """
 Implements the knowledge distillation loss
 """
@@ -73,7 +97,8 @@ class DistillationLoss(torch.nn.Module):
         loss = base_loss * (1 - self.alpha) + distillation_loss * self.alpha
         return loss
 
-
+#### Begin modifications 
+    
 class KLDivLossWithTemperature(torch.nn.Module):
     def __init__(self, tau=1, softmax_target=False):
         super().__init__()
@@ -91,3 +116,5 @@ class KLDivLossWithTemperature(torch.nn.Module):
             log_target=True
         ) * (T * T) / outputs.numel()
         return distillation_loss
+
+#### End modifications 
