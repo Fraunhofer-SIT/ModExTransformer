@@ -1,7 +1,17 @@
 """ MIT License
     Copyright (c) 2020 Tribhuvanesh Orekondy
-    Taken and modified from: https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/blackbox.py """"
-
+    
+    
+    This file was copied from https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/blackbox.py 
+    
+    and modified by Fraunhofer SIT in order to test the robustness of the proposed DeiT attack model under SOTA defenses.
+    
+    
+    Apache 2.0 License 
+    Copyright (c) 2022, Fraunhofer e.V.
+    All rights reserved.
+    
+""""
 
 #!/usr/bin/python
 """Code to simulate a black-box model
