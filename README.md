@@ -16,7 +16,7 @@ If anything breaks, this environment has been tested:
     pip install -r requirements.txt
 
 ## Basic usage
-All arguments can be provided both via the command line and via configuration files. 
+All arguments can be specified both from the command line and from configuration files. 
 For an overview of the available arguments, run 
 
     python main.py --help
@@ -28,10 +28,10 @@ The general syntax for running the script is
     python main.py [-c [<config files>]+] [<other arguments>]*
 
 All configuration files (in order from left to right) override the default values of the argument parser.
-If you add other arguments on the command line, they will be used.
+If you specify additional arguments on the command line, they will be used.
 
 ## Examples
-In the folder [examples](examples) you can find some examples of how to use this script.
+The folder [examples](examples) contains some examples of how to use this script.
 
 ### Train target
 To train a Resnet34 model on CIFAR10, run 
@@ -40,7 +40,7 @@ To train a Resnet34 model on CIFAR10, run
 
 
 ### Train attacker
-To attack this Resnet34 target model with a DeiT-base model on SVHN, run 
+To attack the above Resnet34 target model with a DeiT-base model on SVHN, run 
 
     python main.py -c basic_config.ini examples/attacker.ini
 
@@ -54,6 +54,7 @@ You can also perform the very same attack without augmentation via
 
     python main.py -c basic_config.ini examples/attacker.ini examples/attacker_defended.ini --no-augmentation
     
-(Of course, you could as well add `augmentation = False` to _attacker_defended.ini_)
+(You could as well add `augmentation = False` to _attacker_defended.ini_)
 
-
+## Contact
+In case of issues or to provide feedback, please contact [Verena Battis](https://github.com/VBattis). 
