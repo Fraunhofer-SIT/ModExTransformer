@@ -1,3 +1,8 @@
+
+# Apache 2.0 License
+# Copyright (c) 2022, Fraunhofer e.V.
+# All rights reserved.
+
 import argparse
 import datetime
 import os
