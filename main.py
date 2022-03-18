@@ -10,11 +10,11 @@
 
     Modified passages are marked as follows: 
 
-        #### Begin modifications 
+    #### Begin modifications 
 
-        Code added or modified
+    Code added or modified
 
-        #### End modifications  
+    #### End modifications  
     
     
     Apache 2.0 License
