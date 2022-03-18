@@ -57,4 +57,4 @@ You can also perform the very same attack without augmentation via
 (You could as well add `augmentation = False` to _attacker_defended.ini_)
 
 ## Contact
-In case of issues or to provide feedback, please contact [Verena Battis](https://github.com/VBattis). 
+In case of problems or for feedback please contact [Verena Battis](https://github.com/VBattis). 
