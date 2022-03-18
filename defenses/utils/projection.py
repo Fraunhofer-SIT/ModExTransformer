@@ -1,6 +1,17 @@
 """ MIT License
     Copyright (c) 2020 Tribhuvanesh Orekondy
-    URL: https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/utils/projection.py """"
+    
+    
+    This file was copied from https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/utils/projection.py 
+    
+    and modified by Fraunhofer SIT in order to test the robustness of the proposed DeiT attack model under SOTA defenses.
+    
+    
+    Apache 2.0 License 
+    Copyright (c) 2022, Fraunhofer e.V.
+    All rights reserved.
+    
+""""
 
 
 """ Module to compute projections on the positive simplex or the L1-ball
