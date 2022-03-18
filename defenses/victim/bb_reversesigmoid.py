@@ -1,6 +1,17 @@
 """ MIT License
     Copyright (c) 2020 Tribhuvanesh Orekondy
-    Taken and modified from: https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/bb_reversesigmoid.py """"
+    
+    
+    This file was copied from https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/bb_reversesigmoid.py 
+    
+    and modified by Fraunhofer SIT in order to test the robustness of the proposed DeiT attack model under SOTA defenses.
+    
+    
+    Apache 2.0 License 
+    Copyright (c) 2022, Fraunhofer e.V.
+    All rights reserved.
+    
+""""
 
 import os
 import os.path as osp
