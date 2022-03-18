@@ -1,5 +1,10 @@
 
-"""   Package taken and modified from https://github.com/mseitzer/pytorch-fid  """
+"""   Package copied from https://github.com/mseitzer/pytorch-fid  
+        
+      Apache 2.0
+      Copyright 2018 Institute of Bioinformatics, JKU Linz
+
+"""
 
 import torch
 import torch.nn as nn
