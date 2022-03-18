@@ -1,3 +1,8 @@
+
+# Apache 2.0 License
+# Copyright (c) 2022, Fraunhofer e.V.
+# All rights reserved.
+
 import configparser
 
 from timm.data import create_transform, IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
