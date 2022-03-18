@@ -1,8 +1,10 @@
 # Transformer-based Extraction of Deep Image Models, EuroSP'22
 This is the official repository for the paper **Transformer-based Extraction of Deep Image Models** presented at the IEEE 7th European Symposium on Security and Privacy (EuroS&P'22).
 
-In our Paper, we propose to use a transformer model, namely Facebook's DeiT, to copy deep image models. Hence, this repository is largely based on Facebook Research's [deit](https://github.com/facebookresearch/deit)-repository.
-In addition, the defense mechanisms described in Section 6 of the Paper were taken from Tribhuvanesh Orekondy's [prediction-poisoning](https://github.com/tribhuvanesh/prediction-poisoning)-repo.
+In our paper, we propose to use a transformer model, namely Facebook's DeiT, to copy deep image models. Hence, this repository is largely based on Facebook Research's [deit](https://github.com/facebookresearch/deit)-repository.
+In addition, the defense mechanisms described in Section 6 of the paper were taken from Tribhuvanesh Orekondy's [prediction-poisoning](https://github.com/tribhuvanesh/prediction-poisoning)-repo in order to test the robustness of the proposed attacker against SOTA defences.
+
+Abstract: Model extraction attacks pose a threat to the security of ML models and to the privacy of the data used for training. Previous research has shown that such attacks can be either monetarily motivated to gain an edge over competitors or maliciously in order to mount subsequent attacks on the extracted model. In this paper, recent advances in the field of transformers are exploited to propose an attack tailored to the task of image classification that allows stealing complex convolutional neural network models without any knowledge of their architecture. The attack was performed on a range of datasets and target architectures to evaluate the robustness of the proposed attack. With only 100k queries, we were able to recover up to 99.2% of the black-box target network's accuracy on the test set. We conclude that it is possible to effectively steal complex neural networks with relatively little expertise and conventional means -- even without knowledge of the target's architecture. Recently proposed defences have also been examined for their effectiveness in preventing the attack proposed in this paper.
 
 
 ## Dependencies
