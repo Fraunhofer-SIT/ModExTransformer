@@ -6,7 +6,7 @@
 
 """ This file was copied from: https://github.com/facebookresearch/deit/blob/main/losses.py
     
-    and modified by Fraunhofer SIT in order to use the DeiT as attack model in a model extraction attack.
+    and modified by Verena Battis, Fraunhofer SIT in order to use the DeiT as attack model in a model extraction attack.
 
     Modified passages are marked as follows: 
 
