@@ -1,6 +1,12 @@
-""" MIT License
+""" 
+    MIT License
     Copyright (c) 2020 Tribhuvanesh Orekondy
-    Taken and modified from: https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/__init__.py """"
+    Taken and modified from: https://github.com/tribhuvanesh/prediction-poisoning/blob/master/defenses/victim/__init__.py 
+
+    Apache 2.0 License 
+    Copyright (c) 2022, Fraunhofer e.V.
+    All rights reserved.   
+""""
 
 from .blackbox import Blackbox
 
