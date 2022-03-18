@@ -1,18 +1,28 @@
 
-""" Apache 2.0 License
-    Copyright (c) 2020-present, Facebook, Inc.
-    Taken and modified from: https://github.com/facebookresearch/deit/blob/main/utils.py
-    
- Modified passages are marked with 
- 
- #### Begin modifications 
- 
- Code added or modified
- 
- #### End modifications  """
-
+# Apache 2.0 License
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
+
+
+""" This file was copied from: https://github.com/facebookresearch/deit/blob/main/main.py
+    
+    and modified by Fraunhofer SIT in order to use the DeiT as attack model in a model extraction attack.
+
+    Modified passages are marked as follows: 
+
+    #### Begin modifications 
+
+    Code added or modified
+
+    #### End modifications  
+    
+    
+    Apache 2.0 License
+    Copyright (c) 2022, Fraunhofer e.V.
+    All rights reserved.
+    
+"""
+
 """
 Misc functions, including distributed helpers.
 
